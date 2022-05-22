@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+
+  <!--CSS-->
+
+    <link rel="stylesheet" href="css/style12.css">
+
+
+  <!--boxicons-->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- CDN -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Icon-->
+  <link rel="icon" href="images/Web.ico">
+  </head>
+  <body onload="myfung()">
+
+    <div id="Loading">
+
+    </div>
+<!-- nav start -->
+
+<nav>
+  <div class="sidebar-top" style="
+  margin-bottom: 20px;
+">
+    <span class="shrink-btn">
+      <i class='bx bx-chevron-left'></i>
+    </span>
+    <img src="./images/Logo.png" class="logo" alt="">
+    <h3 class="hide" style="padding-left: 0px;margin-left: 38px;" >HUMS</h3>
+  </div>
+
+
+
+  <div class="sidebar-links">
+    <ul>
+      <div class="#"></div>
+      <li>
+        <a href="Dashboard-student" >
+          <div class="icon">
+            <i class='bx bx-tachometer'></i>
+            <i class='bx bxs-tachometer'></i>
+          </div>
+          <span class="link hide">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="/Profile-student" >
+          <div class="icon">
+            <i class='bx bx-folder'></i>
+            <i class='bx bxs-folder'></i>
+          </div>
+          <span class="link hide">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="Result-student"  class="active">
+          <div class="icon">
+            <i class='bx bx-bar-chart-square'></i>
+            <i class='bx bxs-bar-chart-square'></i>
+          </div>
+          <span class="link hide">Result</span>
+        </a>
+      </li>
+      <li>
+        <a href="Timetable-student" >
+          <div class="icon">
+            <i class='bx bx-notepad'></i>
+            <i class='bx bxs-notepad'></i>
+          </div>
+          <span class="link hide">Time Table</span>
+        </a>
+      </li>
+
+
+    <h4 class="hide">Student Care</h4>
+
+    <ul>
+
+      <li>
+        <a href="Help-student">
+          <div class="icon">
+            <i class='bx bx-help-circle'></i>
+            <i class='bx bxs-help-circle'></i>
+          </div>
+          <span class="link hide">Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="Feedback-student" data-active="5">
+          <div class="icon">
+            <div class="icon">
+              <i class='bx bx-message-square-detail'></i>
+              <i class='bx bxs-message-square-detail'></i>
+            </div>
+          </div>
+          <span class="link hide">Feedback</span>
+        </a>
+      </li>
+
+
+  <div class="sidebar-footer">
+    <a href="#" class="account tooltip-element">
+      <i class='bx bx-user'></i>
+    </a>
+    <div class="admin-user tooltip-element" style="
+    margin-top: 80px;
+">
+      <div class="admin-profile hide">
+        <img src="./images/ppl.png" alt="">
+        <div class="admin-info">
+          <h3><%=Student.name%></h3>
+          
+          <h5>Student</h5>
+        </div>
+      </div>
+      <a href="/logout" class="log-out">
+        <i class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!--Main Start----------------------------------------------------------------------------------------------->
+<main>
+<h1>Result</h1>
+<section class="ftco-section" style="padding-top: 0px;">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th><b>Subject</b></th>
+                <th></th>
+                <th><b>Marks</b</th>
+                <th></th>
+                <th><b>Grade</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"></th>
+                <td>Probability</td>
+                <td></td>
+                <td><%=Student.marks[0]%></td>
+                <td></td>
+                  <% if(Student.marks[0] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <td>Computer Networks</td>
+                <td></td>
+                <td><%=Student.marks[1]%></td>
+                <td></td>
+                  <% if(Student.marks[1] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+
+              <tr>
+                <th scope="row"></th>
+                <td>Python</td>
+                <td></td>
+                <td><%=Student.marks[2]%></td>
+                <td></td>
+                  <% if(Student.marks[2] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+
+              <tr>
+                <th scope="row"></th>
+                <td>Software Engineering</td>
+                <td></td>
+                <td><%=Student.marks[3]%></td>
+                <td></td>
+                  <% if(Student.marks[3] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+
+              <tr>
+                <td></td>
+                <td>Microprocessor</td>
+                <td></td>
+                <td><%=Student.marks[4]%></td>
+                <td></td>
+                  <% if(Student.marks[4] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+
+              <tr>
+                <th scope="row"></th>
+                <td>Data structure</td>
+                <td></td>
+                <td><%=Student.marks[5]%></td>
+                <td></td>
+                  <% if(Student.marks[5] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+              </tr>
+                 
+                <tr>
+                  <th scope="row"></th>
+                  <td>Soft skill</td>
+                  <td></td>
+                  <td><%=Student.marks[6]%></td>
+                  <td></td>
+                  <% if(Student.marks[6] > 45) {%>
+                  <td>
+                      <a href="#" class="btn btn-success">Pass</a>
+                  </td>
+                  <%}else{%>
+                    <td>
+                      <a href="#" class="btn btn-danger">Fail</a>
+                  </td>
+                  <%}%>
+                </tr>
+
+              <tr>
+                <th scope="row"></th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td><a href="#" ></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+  <!--footer-->
+
+  <p class="copyright">
+    &copy; 2022 - <span>Hogwarts University</span> All Rights Reserved.
+  </p>
+</main>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/result/jquery.min.js"></script>
+  <script src="js/result/popper.js"></script>
+  <script src="js/result/bootstrap.min.js"></script>
+  <script src="js/result/main.js"></script>
+
+  <script>
+    // $(document).ready(function(){
+      // 	$('div#loading').removeAttr('id');
+    // });
+    var preloader = document.getElementById("Loading");
+    // window.addEventListener('load', function(){
+    // 	preloader.style.display = 'none';
+    // 	})
+
+    function myfung(){
+      preloader.style.display = 'none';
+    };
+    </script>
+
+
+  </body>
+</html>

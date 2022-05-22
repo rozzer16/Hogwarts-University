@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+
+  <!--Bootstrap-->
+
+    <link rel="stylesheet" href="css/ll.css">
+
+
+  <!--boxicons-->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Dosis:400,500,600,700&display=swap"
+  rel="stylesheet"
+/>
+
+  <!--Icon-->
+  <link rel="icon" href="images/Web.ico">
+
+
+
+
+
+  </head>
+
+<body onload="myfung()">
+
+  <div id="Loading">
+
+  </div>
+<!-- nav start -->
+
+
+
+
+
+
+
+<nav>
+  <div class="sidebar-top" style="
+  margin-bottom: 20px;
+">
+    <span class="shrink-btn">
+      <i class='bx bx-chevron-left'></i>
+    </span>
+    <img src="./images/Logo.png" class="logo" alt="">
+    <h3 class="hide" style="padding-left: 0px;margin-left: 38px;" >HUMS</h3>
+  </div>
+
+
+
+  <div class="sidebar-links">
+    <ul>
+      <div class=""></div>
+      <li>
+        <a href="Dashboard-admin" class="active">
+          <div class="icon">
+            <i class='bx bx-tachometer'></i>
+            <i class='bx bxs-tachometer'></i>
+          </div>
+          <span class="link hide">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="Student-Admin" >
+          <div class="icon">
+            <i class='bx bx-folder'></i>
+            <i class='bx bxs-folder'></i>
+          </div>
+          <span class="link hide">Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="Teacher-Admin" >
+          <div class="icon">
+            <i class='bx bx-bar-chart-square'></i>
+            <i class='bx bxs-bar-chart-square'></i>
+          </div>
+          <span class="link hide">Teacher</span>
+        </a>
+      </li>
+     
+
+  <div class="sidebar-footer">
+    <a href="#" class="account tooltip-element">
+      <i class='bx bx-user'></i>
+    </a>
+    <div class="admin-user tooltip-element" style="
+    margin-top: 300px;
+">
+      <div class="admin-profile hide">
+        <img src="./images/ppl.png" alt="">
+        <div class="admin-info">
+          <h3><%= Admin.username%></h3>
+          
+          <h5>Admin</h5>
+        </div>
+      </div>
+      <a href="logout" class="log-out">
+        <i class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </div>
+</nav>
+<!--Main Start---------------------------------------------------------------------------------------------------------------------->
+<main>
+  <h1>Dashboard</h1>
+
+
+
+<!-- .................................................-1nd,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+  
+
+      <div class="wrapper" style="
+      margin-top: 10px;
+      margin-bottom: 0px;
+  margin-left: 0px;margin-right: 0px;">
+       
+        <input type="radio" name="slider" checked id="home">
+        <input type="radio" name="slider" id="blog">
+        <input type="radio" name="slider" id="code">
+        <input type="radio" name="slider" id="help">
+        <input type="radio" name="slider" id="about">
+        <abc>
+          <label for="home" class="home"><i class="fas fa-home"></i>Home</label>
+          <label for="blog" class="blog"><i class="fas fa-blog"></i>Notice</label>
+          <label for="code" class="code"><i class="fas fa-blog"></i>Holidays</label>
+          <label for="help" class="help"><i class="fas fa-blog"></i>Academic</label>
+          <label for="about" class="about"><i class="fas fa-blog"></i>Details</label>
+          <div class="slider"></div>
+        </abc>
+        <section>
+          <div class="content content-1">
+            <div class="title">Welcome</div>
+            <p>Welcome to Hogwarts University Management System. <br>
+              This is Admin Dashboard. You can add teacher and student in database. </p>
+          </div>
+          <div class="content content-2">
+            <div class="title">Recent</div>
+            <p><ol style="margin-left: 50px;">
+              <li>Every one Should submit Their Mooc Certificate before 18th</li>
+              <li>Every one Should Complete there assingment before 18th</li>
+              <li>Final Semister lab date will be declear in Academic</li>
+              <li>Final Semister date will be declear in Academic</li>
+              
+            </ol></p>
+          </div>
+          <div class="content content-3">
+            <div class="title">Notice</div>
+            <p>
+              <ol style="margin-left: 50px;">
+                <li>18Th Will be holiday for online & offline classes  </li>
+                <li>From 5th Semister TPP class Will begin For placement preparation </li>
+                <li>Final Semister lab date will be declear in Academic</li>
+              <li>Final Semister date will be declear in Academic</li>
+              </ol>
+            </p>
+          </div>
+          <div class="content content-4">
+            <div class="title">Notice</div>
+            <p>
+              <ol style="margin-left: 50px;">
+              <li>From 19th Lab Mst will begin</li>
+              <li>Final Semister exam is starting from 26th</li>
+              
+
+              </ol>
+            </p>
+            
+          </div>
+          
+        </section>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <p class="copyright">
+    &copy; 2022 - <span>Hogwarts University</span> All Rights Reserved.
+  </p>
+</main>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/student_dashboard/script.js"></script>
+
+
+
+
+
+  <script>
+
+  var preloader = document.getElementById("Loading");
+
+
+  function myfung(){
+    preloader.style.display = 'none';
+  };
+  </script>
+
+
+
+
+  </body>
+</html>

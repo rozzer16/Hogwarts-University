@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Grades</title>
+
+  <!--CSS-->
+
+    <link rel="stylesheet" href="css/style16.css">
+
+
+  <!--boxicons-->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- CDN -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://kit.fontawesome.com/00845393db.js" crossorigin="anonymous"></script>
+
+  <!--Icon-->
+  <link rel="icon" href="images/Web.ico">
+  </head>
+  <body onload="myfung()">
+
+    <div id="Loading">
+
+    </div>
+<!-- nav start -->
+
+<nav>
+  <div class="sidebar-top" style="
+  margin-bottom: 20px;
+">
+    <span class="shrink-btn">
+      <i class='bx bx-chevron-left'></i>
+    </span>
+    <img src="./images/Logo.png" class="logo" alt="">
+    <h3 class="hide" style="padding-left: 0px;margin-left: 38px;" >HUMS</h3>
+  </div>
+
+
+
+  <div class="sidebar-links">
+    <ul>
+      <div class="#"></div>
+      <li>
+        <a href="Dashboard-teacher" >
+          <div class="icon">
+            <i class='bx bx-tachometer'></i>
+            <i class='bx bxs-tachometer'></i>
+          </div>
+          <span class="link hide">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="Profile-teacher" >
+          <div class="icon">
+            <i class='bx bx-folder'></i>
+            <i class='bx bxs-folder'></i>
+          </div>
+          <span class="link hide">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="Grade-teacher"  class="active">
+          <div class="icon">
+            <i class='bx bx-bar-chart-square'></i>
+            <i class='bx bxs-bar-chart-square'></i>
+          </div>
+          <span class="link hide">Grades</span>
+        </a>
+      </li>
+      <li>
+        <a href="Timetable-teacher" >
+          <div class="icon">
+            <i class='bx bx-notepad'></i>
+            <i class='bx bxs-notepad'></i>
+          </div>
+          <span class="link hide">Time Table</span>
+        </a>
+      </li>
+
+
+      <h4 class="hide">Teacher Care</h4>
+
+    <ul>
+
+      <li>
+        <a href="Help-teacher">
+          <div class="icon">
+            <i class='bx bx-help-circle'></i>
+            <i class='bx bxs-help-circle'></i>
+          </div>
+          <span class="link hide">Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="Feedback-teacher" data-active="5">
+          <div class="icon">
+            <div class="icon">
+              <i class='bx bx-message-square-detail'></i>
+              <i class='bx bxs-message-square-detail'></i>
+            </div>
+          </div>
+          <span class="link hide">Feedback</span>
+        </a>
+      </li>
+
+
+  <div class="sidebar-footer">
+    <a href="#" class="account tooltip-element">
+      <i class='bx bx-user'></i>
+    </a>
+    <div class="admin-user tooltip-element" style="
+    margin-top: 80px;
+">
+      <div class="admin-profile hide">
+        <img src="./images/ppl.png" alt="">
+        <div class="admin-info">
+          <h3><%=Teacher.name%></h3>
+          <h5>Teacher</h5>
+        </div>
+      </div>
+      <a href="/logout" class="log-out">
+        <i class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!--Main Start----------------------------------------------------------------------------------------------->
+<main>
+<h1>Grades</h1>
+
+<section id="dataSubmit">
+
+
+
+    <!-- Body -->
+
+    <div class="container marks">
+        <h1>Python</h1>
+    </div>
+
+    <div class="container marks-academics">
+      <table class="table table-light table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" id="round-left">#</th>
+                <th scope="col" id="middle">Name</th>
+                <th scope="col" id="middle">Marks</th>
+                <th scope="col" id="middle"></th>
+                <th scope="col" id="round-right">Submit</th>
+              </tr>
+            </thead>
+        <tbody>
+          <tr>
+            <%for(var i=0;i<Student.length;i++){%>
+            <%var count = i+1;%>
+            <th scope="row"><%=count%></th>
+            <td><%=Student[i].name%></td>
+            <form action="/python" method="post">
+              <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[2]%></p></td>
+              <td><input type="hidden" value="<%=Student[i].uid%>" name="uid"></td>
+              <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+              <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+            </form>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container marks">
+        <h1>Software Engineer</h1>
+    </div>
+
+    <div class="container marks-academics">
+        <table class="table table-light table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" id="round-left">#</th>
+                <th scope="col" id="middle">Name</th>
+                <th scope="col" id=middle>Marks</th>
+                <th scope="col" id=middle></th>
+                <th scope="col" id="round-right">Submit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <%for(var i=0;i<Student.length;i++){%>
+                    <%var count = i+1;%>
+                <th scope="row"><%=count%></th>
+                <td><%=Student[i].name%></td>
+                <form action="/se" method="post">
+                  <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[3]%></p></td>
+                  <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+                <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                  <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+              </form>
+              </tr>
+                <%}%>
+            </tbody>
+          </table>
+    </div>
+
+    <div class="container marks">
+        <h1>Probability and Statistics</h1>
+    </div>
+
+    <div class="container marks-academics">
+        <table class="table table-light table-hover">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col" id="round-left">#</th>
+                <th scope="col" id="middle">Name</th>
+                <th scope="col" id=middle>Marks</th>
+                <th scope="col" id=middle></th>
+                <th scope="col" id="round-right">Submit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <%for(var i=0;i<Student.length;i++){%>
+                    <%var count = i+1;%>
+
+              <tr>
+                <th scope="row"><%=count%></th>
+                <td><%=Student[i].name%></td>
+                <form action="/ps" method="post">
+                  <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[0]%></p></td>
+                  <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+                  <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                  <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+              </form>
+              </tr>
+                <%}%>
+            </tbody>
+          </table>
+    </div>
+
+    <div class="container marks">
+      <h1>Computer Networks</h1>
+  </div>
+
+  <div class="container marks-academics">
+      <table class="table table-light table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col" id="round-left">#</th>
+              <th scope="col" id="middle">Name</th>
+              <th scope="col" id=middle>Marks</th>
+              <th scope="col" id=middle></th>
+              <th scope="col" id="round-right">Submit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <%for(var i=0;i<Student.length;i++){%>
+                  <%var count = i+1;%>
+
+            <tr>
+              <th scope="row"><%=count%></th>
+              <td><%=Student[i].name%></td>
+              <form action="/cn" method="post">
+                <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[1]%></p></td>
+                <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+                <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+            </form>
+            </tr>
+              <%}%>
+          </tbody>
+        </table>
+  </div>
+
+  <div class="container marks">
+    <h1>Microprocessor and Interfacing</h1>
+</div>
+
+<div class="container marks-academics">
+    <table class="table table-light table-hover">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" id="round-left">#</th>
+            <th scope="col" id="middle">Name</th>
+            <th scope="col" id=middle>Marks</th>
+            <th scope="col" id=middle></th>
+            <th scope="col" id="round-right">Submit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <%for(var i=0;i<Student.length;i++){%>
+                <%var count = i+1;%>
+
+          <tr>
+            <th scope="row"><%=count%></th>
+            <td><%=Student[i].name%></td>
+            <form action="/mpi" method="post">
+              <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[4]%></p></td>
+              <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+              <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+              <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+          </form>
+          </tr>
+            <%}%>
+        </tbody>
+      </table>
+</div>
+
+<div class="container marks">
+  <h1>Data Structures and Algorithm</h1>
+</div>
+
+<div class="container marks-academics">
+  <table class="table table-light table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" id="round-left">#</th>
+          <th scope="col" id="middle">Name</th>
+          <th scope="col" id=middle>Marks</th>
+          <th scope="col" id=middle></th>
+          <th scope="col" id="round-right">Submit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <%for(var i=0;i<Student.length;i++){%>
+              <%var count = i+1;%>
+
+        <tr>
+          <th scope="row"><%=count%></th>
+          <td><%=Student[i].name%></td>
+          <form action="/ds" method="post">
+            <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[5]%></p></td>
+            <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+            <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+            <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+        </form>
+        </tr>
+          <%}%>
+      </tbody>
+    </table>
+</div>
+
+<div class="container marks">
+  <h1>Soft Skill</h1>
+</div>
+
+<div class="container marks-academics">
+  <table class="table table-light table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col" id="round-left">#</th>
+          <th scope="col" id="middle">Name</th>
+          <th scope="col" id=middle>Marks</th>
+          <th scope="col" id=middle></th>
+          <th scope="col" id="round-right">Submit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <%for(var i=0;i<Student.length;i++){%>
+              <%var count = i+1;%>
+
+        <tr>
+          <th scope="row"><%=count%></th>
+          <td><%=Student[i].name%></td>
+          <form action="/soft" method="post">
+            <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[6]%></p></td>
+            <input type="hidden" value="<%=Student[i].uid%>" name="uid">
+            <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+            <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
+        </form>
+        </tr>
+          <%}%>
+      </tbody>
+    </table>
+</div>
+
+</section>
+
+
+
+
+
+
+
+
+
+  <!--footer-->
+
+  <p class="copyright">
+    &copy; 2022 - <span>Hogwarts University</span> All Rights Reserved.
+  </p>
+</main>
+
+  <script src="js/dashboard.js"></script>
+  <script src="js/result/jquery.min.js"></script>
+  <script src="js/result/popper.js"></script>
+  <script src="js/result/bootstrap.min.js"></script>
+  <script src="js/result/main.js"></script>
+
+  <script>
+    // $(document).ready(function(){
+      // 	$('div#loading').removeAttr('id');
+    // });
+    var preloader = document.getElementById("Loading");
+    // window.addEventListener('load', function(){
+    // 	preloader.style.display = 'none';
+    // 	})
+
+    function myfung(){
+      preloader.style.display = 'none';
+    };
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Help</title>
+
+  <!--Bootstrap-->
+
+    <link rel="stylesheet" href="css/style10.css">
+
+
+  <!--boxicons-->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
+
+
+  <!--Icon-->
+  <link rel="icon" href="images/Web.ico">
+  </head>
+  <body onload="myfung()">
+
+    <div id="Loading">
+
+    </div>
+<!-- nav start -->
+
+<nav>
+  <div class="sidebar-top" style="
+  margin-bottom: 20px;
+">
+    <span class="shrink-btn">
+      <i class='bx bx-chevron-left'></i>
+    </span>
+    <img src="./images/Logo.png" class="logo" alt="">
+    <h3 class="hide" style="padding-left: 0px;margin-left: 38px;" >HUMS</h3>
+  </div>
+
+
+
+  <div class="sidebar-links">
+    <ul>
+      <div class="#"></div>
+      <li>
+        <a href="Dashboard-teacher" >
+          <div class="icon">
+            <i class='bx bx-tachometer'></i>
+            <i class='bx bxs-tachometer'></i>
+          </div>
+          <span class="link hide">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="Profile-teacher" >
+          <div class="icon">
+            <i class='bx bx-folder'></i>
+            <i class='bx bxs-folder'></i>
+          </div>
+          <span class="link hide">Profile</span>
+        </a>
+      </li>
+      <li>
+        <a href="Grade-teacher" >
+          <div class="icon">
+            <i class='bx bx-bar-chart-square'></i>
+            <i class='bx bxs-bar-chart-square'></i>
+          </div>
+          <span class="link hide">Grades</span>
+        </a>
+      </li>
+      <li>
+        <a href="Timetable-teacher" >
+          <div class="icon">
+            <i class='bx bx-notepad'></i>
+            <i class='bx bxs-notepad'></i>
+          </div>
+          <span class="link hide">Time Table</span>
+        </a>
+      </li>
+
+
+      <h4 class="hide">Teacher Care</h4>
+
+    <ul>
+
+      <li>
+        <a href="Help-teacher"  class="active">
+          <div class="icon">
+            <i class='bx bx-help-circle'></i>
+            <i class='bx bxs-help-circle'></i>
+          </div>
+          <span class="link hide">Help</span>
+        </a>
+      </li>
+      <li>
+        <a href="Feedback-teacher" data-active="5">
+          <div class="icon">
+            <div class="icon">
+              <i class='bx bx-message-square-detail'></i>
+              <i class='bx bxs-message-square-detail'></i>
+            </div>
+          </div>
+          <span class="link hide">Feedback</span>
+        </a>
+      </li>
+
+
+  <div class="sidebar-footer">
+    <a href="#" class="account tooltip-element">
+      <i class='bx bx-user'></i>
+    </a>
+    <div class="admin-user tooltip-element" style="
+    margin-top: 80px;
+">
+      <div class="admin-profile hide">
+        <img src="./images/ppl.png" alt="">
+        <div class="admin-info">
+          <h3><%=Teacher.name%></h3>
+          <h5>Teacher</h5>
+        </div>
+      </div>
+      <a href="/logout" class="log-out">
+        <i class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </div>
+</nav>
+<!--Main Start-->
+<main>
+<h1>Help Center</h1>
+
+
+<div class="yo">
+<form action="mailto:atanumax2@gmail.com" method="post" enctype="text/plain">
+
+
+  <label for="">Name</label> <br>
+  <input type="text" name="Name" value=""> <br>
+  <label for="">Email</label> <br>
+  <input type="email" name="Email" value=""> <br>
+  <label for="">Your Massage</label> <br>
+  <textarea name="Massage" rows="10" cols="30"></textarea> <br>
+  <input type="submit"  name="">
+
+</form>
+</div>
+
+
+
+
+
+
+  <!--footer-->
+
+  <p class="copyright">
+    &copy; 2022 - <span>Hogwarts University</span> All Rights Reserved.
+  </p>
+</main>
+
+  <script src="js/dashboard.js"></script>
+
+  <script>
+    // $(document).ready(function(){
+      // 	$('div#loading').removeAttr('id');
+    // });
+    var preloader = document.getElementById("Loading");
+    // window.addEventListener('load', function(){
+    // 	preloader.style.display = 'none';
+    // 	})
+
+    function myfung(){
+      preloader.style.display = 'none';
+    };
+    </script>
+
+
+  </body>
+</html>

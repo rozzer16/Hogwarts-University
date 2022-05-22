@@ -1,0 +1,4 @@
+student - John - j0001
+          Lisa - l0001
+teacher - Rick - r0001  
+          Andrew- a0002   

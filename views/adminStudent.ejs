@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Result</title>
+
+  <!--CSS-->
+
+    <link rel="stylesheet" href="css/style15.css">
+
+
+  <!--boxicons-->
+<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- CDN -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- BootStrap Javascript Bundle -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/00845393db.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Russo+One&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Icon-->
+  <link rel="icon" href="images/Web.ico">
+  </head>
+  <body onload="myfung()">
+
+    <div id="Loading">
+
+    </div>
+<!-- nav start -->
+
+<nav>
+  <div class="sidebar-top" style="
+  margin-bottom: 20px;
+">
+    <span class="shrink-btn">
+      <i class='bx bx-chevron-left'></i>
+    </span>
+    <img src="./images/Logo.png" class="logo" alt="">
+    <h3 class="hide" style="padding-left: 0px;margin-left: 38px;" >HUMS</h3>
+  </div>
+
+
+
+  <div class="sidebar-links">
+    <ul>
+      <div class="#"></div>
+      <li>
+        <a href="Dashboard-admin">
+          <div class="icon">
+            <i class='bx bx-tachometer'></i>
+            <i class='bx bxs-tachometer'></i>
+          </div>
+          <span class="link hide">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="Student-admin"  class="active" >
+          <div class="icon">
+            <i class='bx bx-folder'></i>
+            <i class='bx bxs-folder'></i>
+          </div>
+          <span class="link hide">Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="Teacher-admin" >
+          <div class="icon">
+            <i class='bx bx-bar-chart-square'></i>
+            <i class='bx bxs-bar-chart-square'></i>
+          </div>
+          <span class="link hide">Teacher</span>
+        </a>
+      </li>
+
+
+  <div class="sidebar-footer">
+    <a href="#" class="account tooltip-element">
+      <i class='bx bx-user'></i>
+    </a>
+    <div class="admin-user tooltip-element" style="
+    margin-top: 300px;
+";>
+      <div class="admin-profile hide">
+        <img src="./images/ppl.png" alt="">
+        <div class="admin-info">
+          <h3><%=Admin.username%></h3>
+          
+          <h5>Admin</h5>
+        </div>
+      </div>
+      <a href="/logout" class="log-out">
+        <i class='bx bx-log-out'></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<!--Main Start----------------------------------------------------------------------------------------------->
+<main>
+<h1>Student</h1>
+<div class="body" style="margin-bottom: 320px;">
+  <form action="/Student-Admin" method="post">
+  <div class="container">
+      <div class="row">
+
+      <div class="col-lg-4 col-md-5 col-sm-6 justify-content-start" id="left">
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="name">Name *</label>
+              <input type="name" class="form-control shadow rounded" id="name" placeholder="Student Name"  name="name" required>
+          </div>
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="name">Email *</label>
+              <input type="name" class="form-control shadow rounded" id="email" placeholder="Email"  name="email" required>
+          </div>
+  
+          
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="gender">Gender *</label>
+              <select class="form-control form-control-sm shadow rounded" name="gender" required>
+                  <option value="#">Select</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+          </div>
+
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-6 justify-content-center" id="center">
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="uid">UID *</label>
+              <input type="text" class="form-control shadow rounded" id="uid" placeholder="eg: 21CS001" name="uid" required>
+          </div>
+          
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="name">Number *</label>
+              <input type="name" class="form-control shadow rounded" id="phone" placeholder="Number"  name="phone" required>
+          </div>
+          <div class="form-group">
+              <label for="password">Password *</label>
+              <input type="text" class="form-control shadow rounded" id="password" placeholder="eg: John001" name="password" required>
+          </div>
+          
+
+
+      </div>
+
+      <div class="col-lg-4 col-md-5 col-sm-6 justify-content-end" id="right">
+          <div class="form-group" style="margin-bottom: 25px;">
+              <label for="dob">D.O.B *</label>
+              <input type="date" class="form-control shadow rounded" id="dob" name="dob" required>
+          </div>
+          <div class="form-group">
+              <label for="year">Adress *</label>
+              <input type="year" class="form-control shadow rounded" id="address" placeholder="Address" name="address" required>
+          </div>
+        
+          <div class="form-group" style="margin-bottom: 25px;margin-top: 25px;">
+              <label for="blood">Section *</label>
+              <select class="form-control form-control-sm shadow rounded" id="section" name="section" required>
+                  <option value="#">Select</option>
+                  <option value="601">601</option>
+                  <option value="602">602</option>
+                  <option value="603">603</option>
+                
+                </select>
+          </div>
+
+          <div class="toast">
+            <div class="toast-content">
+                <i class="fas fa-solid fa-check check"></i>
+          
+                <div class="message">
+                    <span class="text text-1">Success</span>
+                    <span class="text text-2">Your changes has been saved</span>
+                </div>
+            </div>
+            <i class="fa-solid fa-xmark close"></i>
+          
+            <div class="progress"></div>
+          </div>
+
+          <div class="form-group buttonBox" style="margin-left: 150px;">
+              <button type="submit" class="btn btn-dark">Submit</button>
+          </div>
+      </div>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+
+
+
+
+
+
+  <!--footer-->
+
+  <p class="copyright">
+    &copy; 2022 - <span>Hogwarts University</span> All Rights Reserved.
+  </p>
+</main>
+
+  <script src="js/dashboard.js"></script>
+  <script src="popup/script.js"></script>
+
+
+  <script>
+
+    var preloader = document.getElementById("Loading");
+  
+
+    function myfung(){
+      preloader.style.display = 'none';
+    };
+    </script>
+
+
+  </body>
+</html>
