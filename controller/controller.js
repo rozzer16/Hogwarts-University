@@ -163,7 +163,7 @@ create_teacher = (req,res)=>{
 
 get_teacher = async(req,res)=>{
     if(req.session.type === 'teacher'){
-        await TeacherfindOne({eid: req.session.username}, (err, foundTeacher)=>{
+        await Teacher.findOne({eid: req.session.username}, (err, foundTeacher)=>{
             console.log(foundTeacher);
             if(!err){
                 res.render("teacherProfile", {Teacher: foundTeacher})
