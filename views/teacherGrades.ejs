@@ -7,17 +7,19 @@
   <!--CSS-->
 
     <link rel="stylesheet" href="css/style16.css">
+    <link rel="stylesheet" href="css/io.css">
+
 
 
   <!--boxicons-->
-<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 <!-- CDN -->
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://kit.fontawesome.com/7053611a9b.js" crossorigin="anonymous"></script>
 
-<script src="https://kit.fontawesome.com/00845393db.js" crossorigin="anonymous"></script>
 
   <!--Icon-->
   <link rel="icon" href="images/Web.ico">
@@ -136,7 +138,8 @@
 
 <!--Main Start----------------------------------------------------------------------------------------------->
 <main>
-<h1>Grades</h1>
+  <h1>Grades</h1>
+
 
 <section id="dataSubmit">
 
@@ -145,7 +148,7 @@
     <!-- Body -->
 
     <div class="container marks">
-        <h1>Python</h1>
+        <h2>Python</h2>
     </div>
 
     <div class="container marks-academics">
@@ -155,7 +158,7 @@
                 <th scope="col" id="round-left">#</th>
                 <th scope="col" id="middle">Name</th>
                 <th scope="col" id="middle">Marks</th>
-                <th scope="col" id="middle"></th>
+                <th scope="col" id="middle">Update</th>
                 <th scope="col" id="round-right">Submit</th>
               </tr>
             </thead>
@@ -166,9 +169,10 @@
             <th scope="row"><%=count%></th>
             <td><%=Student[i].name%></td>
             <form action="/python" method="post">
-              <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[2]%></p></td>
-              <td><input type="hidden" value="<%=Student[i].uid%>" name="uid"></td>
+              <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[2]%></p></td>
+              <input type="hidden" value="<%=Student[i].uid%>" name="uid">
               <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+              <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
               <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
             </form>
           </tr>
@@ -178,7 +182,7 @@
     </div>
 
     <div class="container marks">
-        <h1>Software Engineer</h1>
+        <h2>Software Engineer</h2>
     </div>
 
     <div class="container marks-academics">
@@ -199,9 +203,10 @@
                 <th scope="row"><%=count%></th>
                 <td><%=Student[i].name%></td>
                 <form action="/se" method="post">
-                  <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[3]%></p></td>
+                  <td><p style="padding-top: 20px;margin-bottom: 0px;" ><%=Student[i].marks[3]%></p></td>
                   <input type="hidden" value="<%=Student[i].uid%>" name="uid">
                 <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
                   <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
               </form>
               </tr>
@@ -211,7 +216,7 @@
     </div>
 
     <div class="container marks">
-        <h1>Probability and Statistics</h1>
+        <h2>Probability and Statistics</h2>
     </div>
 
     <div class="container marks-academics">
@@ -234,9 +239,10 @@
                 <th scope="row"><%=count%></th>
                 <td><%=Student[i].name%></td>
                 <form action="/ps" method="post">
-                  <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[0]%></p></td>
+                  <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[0]%></p></td>
                   <input type="hidden" value="<%=Student[i].uid%>" name="uid">
                   <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                  <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
                   <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
               </form>
               </tr>
@@ -246,7 +252,7 @@
     </div>
 
     <div class="container marks">
-      <h1>Computer Networks</h1>
+      <h2>Computer Networks</h2>
   </div>
 
   <div class="container marks-academics">
@@ -269,9 +275,10 @@
               <th scope="row"><%=count%></th>
               <td><%=Student[i].name%></td>
               <form action="/cn" method="post">
-                <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[1]%></p></td>
+                <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[1]%></p></td>
                 <input type="hidden" value="<%=Student[i].uid%>" name="uid">
                 <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+                <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
                 <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
             </form>
             </tr>
@@ -281,7 +288,7 @@
   </div>
 
   <div class="container marks">
-    <h1>Microprocessor and Interfacing</h1>
+    <h2>Microprocessor and Interfacing</h2>
 </div>
 
 <div class="container marks-academics">
@@ -304,9 +311,10 @@
             <th scope="row"><%=count%></th>
             <td><%=Student[i].name%></td>
             <form action="/mpi" method="post">
-              <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[4]%></p></td>
+              <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[4]%></p></td>
               <input type="hidden" value="<%=Student[i].uid%>" name="uid">
               <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+              <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
               <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
           </form>
           </tr>
@@ -316,7 +324,7 @@
 </div>
 
 <div class="container marks">
-  <h1>Data Structures and Algorithm</h1>
+  <h2>Data Structures and Algorithm</h2>
 </div>
 
 <div class="container marks-academics">
@@ -339,9 +347,10 @@
           <th scope="row"><%=count%></th>
           <td><%=Student[i].name%></td>
           <form action="/ds" method="post">
-            <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[5]%></p></td>
+            <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[5]%></p></td>
             <input type="hidden" value="<%=Student[i].uid%>" name="uid">
             <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+            <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
             <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
         </form>
         </tr>
@@ -351,7 +360,7 @@
 </div>
 
 <div class="container marks">
-  <h1>Soft Skill</h1>
+  <h2>Soft Skill</h2>
 </div>
 
 <div class="container marks-academics">
@@ -374,9 +383,10 @@
           <th scope="row"><%=count%></th>
           <td><%=Student[i].name%></td>
           <form action="/soft" method="post">
-            <td><input type="text" placeholder="Marks" id="marks" name="marks" ><p><%=Student[i].marks[6]%></p></td>
+            <td><p style="padding-top: 20px;margin-bottom: 0px;"><%=Student[i].marks[6]%></p></td>
             <input type="hidden" value="<%=Student[i].uid%>" name="uid">
             <input type="hidden" value="<%=Teacher.eid%>" name="eid">
+            <td><input type="text" placeholder="Marks" id="marks" name="marks" ></td>
             <td><button type="submit" class="btn btn-dark" style="width: 50px;" value="<%=i%>"><i class="fas fa-check-circle"></i></button></td>
         </form>
         </tr>
@@ -407,6 +417,14 @@
   <script src="js/result/popper.js"></script>
   <script src="js/result/bootstrap.min.js"></script>
   <script src="js/result/main.js"></script>
+
+  <script src="js/teacher_grade/jquery.min.js"></script>
+  <script src="js/teacher_grade/popper.js"></script>
+  <script src="js/teacher_grade/bootstrap.min.js"></script>
+  <script src="js/teacher_grade/main.js"></script>
+  
+
+
 
   <script>
     // $(document).ready(function(){
