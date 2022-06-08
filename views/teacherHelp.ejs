@@ -8,9 +8,15 @@
 
     <link rel="stylesheet" href="css/style10.css">
 
+    <link rel="stylesheet" href="css/pq.css">
+
 
   <!--boxicons-->
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- Front awsome -->
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -132,19 +138,94 @@
 <h1>Help Center</h1>
 
 
-<div class="yo">
-<form action="mailto:atanumax2@gmail.com" method="post" enctype="text/plain">
 
 
-  <label for="">Name</label> <br>
-  <input type="text" name="Name" value=""> <br>
-  <label for="">Email</label> <br>
-  <input type="email" name="Email" value=""> <br>
-  <label for="">Your Massage</label> <br>
-  <textarea name="Massage" rows="10" cols="30"></textarea> <br>
-  <input type="submit"  name="">
+<div>
+  <section class="ftco-section" style="
+  padding-bottom: 40px;
+  padding-top: 20px;
+">
+		<div class="container">
 
-</form>
+			<div class="row justify-content-center">
+				<div class="col-lg-10 col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-md-7 d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">Help</h3>
+									<div id="form-message-warning" class="mb-4"></div> 
+				      		<div id="form-message-success" class="mb-4">
+				            Your message was sent, thank you!
+				      		</div>
+									<form action="mailto:reportmanagement62@gmail.com" method="post" enctype="text/plain">
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+												</div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+													
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="email" class="form-control" name="email" id="email" placeholder="Email">
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<textarea name="message" class="form-control" id="message" cols="30" rows="7" placeholder="Message"></textarea>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group">
+													<input type="submit" value="Send Message" class="btn btn-outline-dark">
+													<div class="submitting"></div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary w-100 p-lg-5 p-4">
+									<h3 class="mb-4 mt-md-4">Contact us</h3>
+				        	<div class="dbox w-100 d-flex align-items-start">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-map-marker"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Address:</span> Hogwarts Castle, Highlands Scotland, Great Britain</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-phone"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Phone:</span> <a href="tel://8016976125">+918016976125</a></p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-paper-plane"></span>
+				        		</div>
+				        		<div class="text pl-3">
+					            <p><span>Email:</span> <a href="mailto:reportmanagement62@gmail.com">reportmanagement62</a></p>
+					          </div>
+				          </div>
+				        
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 </div>
 
 
@@ -161,14 +242,17 @@
 
   <script src="js/dashboard.js"></script>
 
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/main.js"></script>
+
   <script>
-    // $(document).ready(function(){
-      // 	$('div#loading').removeAttr('id');
-    // });
+  
     var preloader = document.getElementById("Loading");
-    // window.addEventListener('load', function(){
-    // 	preloader.style.display = 'none';
-    // 	})
+
 
     function myfung(){
       preloader.style.display = 'none';
